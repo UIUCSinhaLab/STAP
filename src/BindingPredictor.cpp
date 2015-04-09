@@ -1187,7 +1187,7 @@ int BindingPredictor::train()
 
 int BindingPredictor::analyzeFeatures( vector< vector< double > >& featureEffects ) const
 {
-    featureEffects = vector< vector< double > >( nOutFactors(), nInFactors() );
+      featureEffects = vector< vector< double > >( nOutFactors(), vector< double>(nInFactors(), 0.0));
     
 // 	if ( nInFactors() != 1 ) { cerr << "analyzeFeatures() is only applicable when nInFactors = 1" << endl; exit( 1 ); }
 

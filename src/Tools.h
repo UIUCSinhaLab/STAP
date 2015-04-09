@@ -3,6 +3,8 @@
 */
 #ifndef TOOLS_H
 #define TOOLS_H
+
+#include <algorithm>
 #include <cassert>
 #include <cmath>
 #include <cstdlib>
@@ -10,8 +12,11 @@
 #include <iomanip>
 #include <iostream>
 #include <map>
+#include <string.h>
 #include <string>
 #include <vector>
+#include <limits>
+#include <numeric>
 
 #include <gsl/gsl_math.h>
 #include <gsl/gsl_matrix.h>

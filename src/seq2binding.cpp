@@ -201,7 +201,7 @@ int main( int argc, char* argv[] )
         cerr << "Cannot find the binding data file " << dataFile << endl;
         exit( 1 );
     }
-	vector< vector< double > > bindingData( nExps, nSeqs );
+	vector< vector< double > > bindingData( nExps, vector< double>(nSeqs) );
 	for ( int i = 0; i < nExps; i++ ) {
 		for ( int j = 0; j < nSeqs; j++ ) {
 			string name;
@@ -408,7 +408,7 @@ int main( int argc, char* argv[] )
 			 
 		 // reading test data
 		ifstream fTestData( testDataFile.c_str() );
-		vector< vector< double > > testBindingData( nExps, nTestSeqs );
+		vector< vector< double > > testBindingData( nExps, vector< double >(nTestSeqs) );
 		for ( int i = 0; i < nExps; i++ ) {
 			for ( int j = 0; j < nTestSeqs; j++ ) {
 				string name;
